@@ -8,7 +8,7 @@ class Cinema(Base):
     __tablename__ = "cinema"
 
     id        = Column(Integer, primary_key=True, unique=True, index=True)
-    name      = Column(String, unique=True, index=True)
+    name      = Column(String, index=True)
     address   = Column(Text, index=True)
     is_active = Column(Boolean, default=True)
     create_at = Column(Date, default=date.today())
