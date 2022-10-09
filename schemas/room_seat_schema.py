@@ -17,6 +17,7 @@ class Room_seatUpdate(Room_seatBase):
 
 class Room_seatUpdateByIsActive(BaseModel):
     is_active : bool = True
+    update_at : date = date.today()
 
 class Room_seatUpdateByIsOccupied(BaseModel):
     is_occupied : bool = False

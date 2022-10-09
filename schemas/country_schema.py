@@ -13,6 +13,7 @@ class CountryUpdate(CountryBase):
 
 class CountryUpdateByIsActive(BaseModel):
     is_active : bool = True
+    update_at : date = date.today()
 
 class Country(CountryBase or CountryUpdateByIsActive):
     id   : int

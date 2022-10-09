@@ -16,6 +16,7 @@ class FoodUpdate(FoodBase):
 
 class FoodUpdateByIsActive(BaseModel):
     is_active : bool = True
+    update_at : date = date.today()
 
 class Food(FoodBase or FoodUpdateByIsActive):
     id : int

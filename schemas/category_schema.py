@@ -13,6 +13,7 @@ class CategoryUpdate(CategoryBase):
 
 class CategoryUpdateByIsActive(BaseModel):
     is_active : bool = True
+    update_at : date = date.today()
 
 class Category(CategoryBase or CategoryUpdateByIsActive):
     id          : int

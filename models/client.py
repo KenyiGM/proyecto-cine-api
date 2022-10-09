@@ -11,7 +11,7 @@ class Client(Base):
     firstname        = Column(String, index=True)
     lastname         = Column(String)
     years_old        = Column(Integer)
-    indentity_number = Column(String, index=True)
+    indentity_number = Column(String)
     is_active        = Column(Boolean, default=True)
     create_at        = Column(Date, default=date.today())
     update_at        = Column(Date)

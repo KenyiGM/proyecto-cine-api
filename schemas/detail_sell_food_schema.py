@@ -16,6 +16,7 @@ class Detail_sell_foodUpdate(Detail_sell_foodBase):
 
 class Detail_sell_foodUpdateByIsActive(BaseModel):
     is_active : bool = True
+    update_at : date = date.today()
 
 class Detail_sell_food(Detail_sell_foodBase or Detail_sell_foodUpdateByIsActive):
     id : int

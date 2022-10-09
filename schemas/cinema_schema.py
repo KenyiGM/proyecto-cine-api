@@ -16,6 +16,7 @@ class CinemaUpdate(CinemaBase):
 
 class CinemaUpdateByIsActive(BaseModel):
     is_active : bool = True
+    update_at : date = date.today()
 
 class Cinema(CinemaBase or CinemaUpdateByIsActive):
     id     : int

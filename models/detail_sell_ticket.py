@@ -10,7 +10,7 @@ class Detail_sell_ticket(Base):
     id             = Column(Integer, primary_key=True, unique=True, index=True)
     is_active      = Column(Boolean, default=True)
     create_at      = Column(Date, default=date.today())
-    finish_at      = Column(Date)
+    update_at      = Column(Date)
     room_seat_id   = Column(Integer, ForeignKey("room_seat.id"))
     sell_ticket_id = Column(Integer, ForeignKey("sell_ticket.id"))
     ticket_id      = Column(String, ForeignKey("ticket.id"))

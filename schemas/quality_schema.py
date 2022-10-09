@@ -1,23 +1,23 @@
 from datetime import date
 from typing import Optional
 from pydantic import BaseModel
+from schemas.movie_schema import Movie
 
-class CityBase(BaseModel):
-    name       : str
-    country_id : int
-    
-class CityCreate(CityBase):
+class QualityBase(BaseModel):
+    name : str
+
+class QualityCreate(QualityBase):
     create_at : date = date.today()
 
-class CityUpdate(CityBase):
-    country_id: Optional[int]
+class QualityUpdate(QualityBase):
     update_at : date = date.today()
 
-class CityUpdateByIsActive(BaseModel):
+class QualityUpdateByIsActive(BaseModel):
     is_active : bool = True
     update_at : date = date.today()
 
-class City(CityBase or CityUpdateByIsActive):
+class Quality(QualityBase or QualityUpdateByIsActive):
     id          : int
+    movie : list[Movie] = []
     class Config:
         orm_mode = True
