@@ -15,6 +15,8 @@ class Employee(Base):
     indentity_number = Column(String, index=True)
     address          = Column(String, index=True)
     email            = Column(String, index=True)
+    start_date       = Column(Date, index=True)
+    departure_date   = Column(Date)
     is_active        = Column(Boolean, default=True)
     create_at        = Column(Date, default=date.today())
     update_at        = Column(Date)

@@ -8,6 +8,8 @@ class Detail_sell_ticket(Base):
     __tablename__ = "detail_sell_ticket"
     
     id             = Column(Integer, primary_key=True, unique=True, index=True)
+    quantity       = Column(Integer, index=True)
+    subtotal       = Column(Float, index=True)
     is_active      = Column(Boolean, default=True)
     create_at      = Column(Date, default=date.today())
     update_at      = Column(Date)

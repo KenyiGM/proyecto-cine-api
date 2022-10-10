@@ -3,10 +3,10 @@ from typing import Optional
 from pydantic import BaseModel
 
 class Detail_sell_foodBase(BaseModel):
-    name        : str
-    price       : float
-    quantity    : int  
-    category_id : int
+    quantity : int
+    subtotal : float
+    sell_food_id : int
+    food_id : int
 
 class Detail_sell_foodCreate(Detail_sell_foodBase):
     create_at : date = date.today()

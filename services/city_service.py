@@ -26,6 +26,7 @@ def update_city(db:Session, city_id:int, city:CityUpdate):
 def update_city_by_is_active(db:Session, city_id:int, city:CityUpdateByIsActive):
     edit_city           = db.query(City).get(city_id)
     edit_city.is_active = city.is_active
+    edit_city.update_at  = city.update_at
     db.commit()
     return edit_city
 

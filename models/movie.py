@@ -8,6 +8,7 @@ class Movie(Base):
     __tablename__ = "movie"
 
     id          = Column(Integer, primary_key=True, unique=True, index=True)
+    name        = Column(String, index=True)
     description = Column(Text)
     duration    = Column(Float, index=True)
     director    = Column(String)

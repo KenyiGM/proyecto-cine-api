@@ -10,7 +10,9 @@ class EmployeeBase(BaseModel):
     birthday : date
     indentity_number : str
     address : str
-    email   : str
+    email   : str  
+    start_date : date
+    departure_date : Optional[date]
     user_id : int
 
 class EmployeeCreate(EmployeeBase):
@@ -21,6 +23,7 @@ class EmployeeUpdate(EmployeeBase):
 
 class EmployeeFinish(EmployeeBase):
     is_active : bool = False
+    departure_date : date = date.today()
     finish_at : date = date.today()
 
 class Employee(EmployeeBase or EmployeeFinish):

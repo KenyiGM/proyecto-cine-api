@@ -16,7 +16,7 @@ class FunctionUpdate(FunctionBase):
     update_at : date = date.today()
 
 class FunctionUpdateByIsActive(BaseModel):
-    is_started : bool
+    is_started : bool = True
     is_active : bool = True
     update_at : date = date.today()
 

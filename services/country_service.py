@@ -26,6 +26,7 @@ def update_country(db:Session, country_id:int, country:CountryUpdate):
 def update_country_by_is_active(db:Session, country_id:int, country:CountryUpdateByIsActive):
     edit_country           = db.query(Country).get(country_id)
     edit_country.is_active = country.is_active
+    edit_country.update_at = country.update_at
     db.commit()
     return edit_country
 

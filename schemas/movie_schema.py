@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from schemas.function_schema import Function
 
 class MovieBase(BaseModel):
+    name        : str
     description : Optinal[str]
     duration    : float
     director    : Optional[str]
