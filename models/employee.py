@@ -25,3 +25,5 @@ class Employee(Base):
 
     user        = relationship("User", back_populates="employee")
     sell_ticket = relationship("Sell_ticket", back_populates="employee")
+    sell_food = relationship("Sell_food", back_populates="employee")
+    

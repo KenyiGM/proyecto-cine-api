@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from services.sell_food_service import *
 from databases.repository import get_db
-from schemas.sell_food_schema import sell_food
+from schemas.sell_food_schema import Sell_food
 
 sell_food = APIRouter()
 

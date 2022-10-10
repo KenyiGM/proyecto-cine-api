@@ -7,7 +7,7 @@ class Detail_sell_ticketBase(BaseModel):
     subtotal     : float 
     room_seat_id : int
     sell_ticket_id : int
-    ticket_id : id
+    ticket_id : int
 
 class Detail_sell_ticketCreate(Detail_sell_ticketBase):
     create_at : date = date.today()

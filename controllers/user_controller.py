@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from services.user_service import *
 from databases.repository import get_db
-from schemas.user_schema import user
+from schemas.user_schema import User
 
 user = APIRouter()
 

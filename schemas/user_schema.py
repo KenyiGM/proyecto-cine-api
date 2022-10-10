@@ -22,6 +22,6 @@ class UserFinish(BaseModel):
 class User(UserBase or UserFinish):
     id          : int
     client : list[Client] = []
-    employee : list[employee] = []
+    employee : list[Employee] = []
     class Config:
         orm_mode = True

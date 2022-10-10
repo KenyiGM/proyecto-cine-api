@@ -25,7 +25,7 @@ async def update_one(user_type_id:int, user_type=User_typeUpdate, db:Session = D
     return update_user_type(db, user_type_id, user_type)
 
 @user_type.put('/user_type/{user_type_id}/is_active', response_model=User_type)
-async def update_one_by_is_active(user_type_id:int, user_type:user_typeFinish, db:Session = Depends(get_db)):
+async def update_one_by_is_active(user_type_id:int, user_type:User_typeUpdateByIsActive, db:Session = Depends(get_db)):
     return update_user_type_by_is_active(db, user_type_id, user_type)
 
 @user_type.delete('/user_type/{user_type_id}')

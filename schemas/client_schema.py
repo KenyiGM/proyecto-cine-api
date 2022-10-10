@@ -1,7 +1,6 @@
 from datetime import date
 from typing import Optional
 from pydantic import BaseModel
-from schemas.user_schema import User
 from schemas.sell_ticket_schema import Sell_ticket
 from schemas.sell_food_schema import Sell_food
 

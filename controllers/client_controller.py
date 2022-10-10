@@ -32,7 +32,7 @@ async def update_one(client_id:int, client:ClientUpdate, db:Session = Depends(ge
     return update_client(db, client_id, client) 
 
 @client.put('/client/{client_id}/is_active', response_model=Client)
-async def update_one_by_is_active(client_id:int, client:clientUpdateByIsActive, db:Session = Depends(get_db)):
+async def update_one_by_is_active(client_id:int, client:ClientUpdateByIsActive, db:Session = Depends(get_db)):
     return update_client_by_is_active(db, client_id, client)
 
 @client.delete('/client/{client_id}')

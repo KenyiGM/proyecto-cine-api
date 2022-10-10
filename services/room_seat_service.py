@@ -25,7 +25,7 @@ def update_room_seat(db:Session, room_seat_id:int, room_seat:Room_seatUpdate):
     db.commit()
     return edit_room_seat
 
-def update_room_seat_by_is_active(db:Session, room_seat_id:int, room_seat:room_seatUpdateByIsActive):
+def update_room_seat_by_is_active(db:Session, room_seat_id:int, room_seat:Room_seatUpdateByIsActive):
     edit_room_seat           = db.query(Room_seat).get(room_seat_id)
     edit_room_seat.is_active = room_seat.is_active
     edit_room_seat.update_at = room_seat.update_at

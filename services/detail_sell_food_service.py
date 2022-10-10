@@ -15,7 +15,7 @@ def insert_detail_sell_food(db:Session, detail_sell_food:Detail_sell_foodCreate)
     db.refresh(new_detail_sell_food)
     return new_detail_sell_food
 
-def update_detail_sell_food(db:Session, detail_sell_food_id:int, detail_sell_food:detail_sell_foodUpdate):
+def update_detail_sell_food(db:Session, detail_sell_food_id:int, detail_sell_food:Detail_sell_foodUpdate):
     edit_detail_sell_food = db.query(Detail_sell_food).get(detail_sell_food_id)
     edit_detail_sell_food.quantity = detail_sell_food.quantity
     edit_detail_sell_food.subtotal = detail_sell_food.subtotal
@@ -25,7 +25,7 @@ def update_detail_sell_food(db:Session, detail_sell_food_id:int, detail_sell_foo
     db.commit()
     return edit_detail_sell_food
 
-def update_detail_sell_food_by_is_active(db:Session, detail_sell_food_id:int, detail_sell_food:detail_sell_foodUpdateByIsActive):
+def update_detail_sell_food_by_is_active(db:Session, detail_sell_food_id:int, detail_sell_food:Detail_sell_foodUpdateByIsActive):
     edit_detail_sell_food           = db.query(Detail_sell_food).get(detail_sell_food_id)
     edit_detail_sell_food.is_active = detail_sell_food.is_active
     edit_detail_sell_food.update_at = detail_sell_food.update_at

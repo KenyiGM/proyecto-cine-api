@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from services.sell_ticket_service import *
 from databases.repository import get_db
-from schemas.sell_ticket_schema import sell_ticket
+from schemas.sell_ticket_schema import Sell_ticket
 
 sell_ticket = APIRouter()
 

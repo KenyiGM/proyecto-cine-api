@@ -5,7 +5,7 @@ from schemas.function_schema import Function
 
 class MovieBase(BaseModel):
     name        : str
-    description : Optinal[str]
+    description : Optional[str]
     duration    : float
     director    : Optional[str]
     cast        : Optional[str]

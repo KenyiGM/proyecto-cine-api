@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from services.room_seat_service import *
 from databases.repository import get_db
-from schemas.room_seat_schema import room_seat
+from schemas.room_seat_schema import Room_seat
 
 room_seat = APIRouter()
 

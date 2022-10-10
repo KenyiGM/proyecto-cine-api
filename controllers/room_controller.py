@@ -20,12 +20,12 @@ async def get_one(room_id:int , db:Session = Depends(get_db)):
 async def insert_one(room:RoomCreate, db:Session = Depends(get_db)):
     return insert_room(db, room)
 
-@room.put('/room/{room_id}', response_model=room)
+@room.put('/room/{room_id}', response_model=Room)
 async def update_one(room_id:int, room:RoomUpdate, db:Session = Depends(get_db)):
     return update_room(db, room_id, room)
 
 @room.put('/room/{room_id}/is_active', response_model=Room)
-async def update_one_by_is_active(room_id:int, room:roomUpdateByIsActive, db:Session = Depends(get_db)):
+async def update_one_by_is_active(room_id:int, room:RoomUpdateByIsActive, db:Session = Depends(get_db)):
     return update_room_by_is_active(db, room_id, room)
 
 @room.delete('/room/{room_id}')

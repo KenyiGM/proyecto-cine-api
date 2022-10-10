@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from models.user import User_type
+from models.user_type import User_type
 from schemas.user_type_schema import User_typeCreate, User_typeUpdate, User_typeUpdateByIsActive
 
 def get_user_types(db:Session):
