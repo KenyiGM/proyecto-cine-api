@@ -8,14 +8,11 @@ def get_employees(db:Session):
 def get_employee(db:Session, employee_id : int):
     return db.query(Employee).filter(Employee.id==employee_id).first()
 
-def get_employee_by_indentity_number(db:Session, employee_indentity_number : str):
+def get_employee_by_identity_number(db:Session, employee_indentity_number : str):
     return db.query(Employee).filter(Employee.indentity_number==employee_indentity_number).first()
 
-def get_employee_by_name(db:Session, employee_name : str):
-    return db.query(Employee).filter(Employee.name==employee_name).first()
-
-def get_employee_by_email(db:Session, employee_email : int):
-    return db.query(Employee).filter(Employee.email==employee_email).first()
+def get_employee_by_firstname(db:Session, employee_firstname : str):
+    return db.query(Employee).filter(Employee.firstname==employee_firstname).all()
 
 def insert_employee(db:Session, employee:EmployeeCreate):
     new_employee = Employee(firstname = employee.firstname, lastname = employee.lastname, years_old = employee.years_old, birthday = employee.birthday, indentity_number = employee.indentity_number, address = employee.address, email = employee.email, start_date = employee.start_date, departure_date = employee.departure_date, user_id = employee.user_id)
